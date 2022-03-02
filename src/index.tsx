@@ -1,1 +1,1 @@
-export {}
+export { Span } from "./stories/Span";

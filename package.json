@@ -29,12 +29,13 @@
   },
   "scripts": {
     "start": "start-storybook -p 6006",
-    "build": "npm run clean && tsc && npm run build:css",
-    "test": "react-scripts test",
+    "build": "npm run clean && tsc && npm run build:css-min && npm run clean:stories",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "clean": "rimraf dist/",
-    "build:css": "tailwindcss -i ./src/index.css -o ./dist/index.css"
+    "clean:stories": "rimraf dist/stories",
+    "build:css": "tailwindcss -i ./src/index.css -o ./dist/index.css",
+    "build:css-min": "tailwindcss -o ./dist/index.css --minify"
   },
   "eslintConfig": {
     "extends": [
@@ -84,6 +85,8 @@
     "@types/react-dom": "^17.0.12",
     "autoprefixer": "^10.4.2",
     "postcss": "^8.4.7",
+    "prettier": "^2.5.1",
+    "prettier-plugin-tailwindcss": "^0.1.8",
     "rimraf": "^3.0.2",
     "semantic-release": "^19.0.2",
     "tailwindcss": "^3.0.23",

@@ -1,5 +1,5 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { Span } from "./Span";
+import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Span } from '../components/Span'
 
 export default {
     title: 'UI/Elements/Span',
@@ -11,11 +11,11 @@ export default {
     // }
 } as ComponentMeta<typeof Span>
 
-const Template: ComponentStory<typeof Span> = (args) => <Span  {...args}/>
+const Template: ComponentStory<typeof Span> = (args) => <Span {...args} />
 
 export const Basic = Template.bind({})
 Basic.args = {
-    label: 'Span with Tailwindcss'
+    label: 'Span with Tailwindcss',
 }
 
 // export const AllCaps = Template.bind({})

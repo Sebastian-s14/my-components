@@ -1,3 +1,3 @@
 import './index.css'
-
-export { Span } from "./stories/Span";
+export { Span } from './components/Span'
+export { Button } from './components/Button'
